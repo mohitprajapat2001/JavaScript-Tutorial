@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,22 +19,26 @@
             margin: 4px 2px;
             transition-duration: 0.4s;
             cursor: pointer;
-          }
+        }
     </style>
 </head>
+
 <body>
-    <button ondblclick="clck()" class="mybutton" id="btn">Hello</button>
+    <button>Hello</button>
 </body>
 <script>
-   //alert("Hello World")
-   //var name = prompt("Hello");
-   //alert("hello "+name+" Subscribe")
-   function clck(){
-    //alert("Hello")
-    //console.log("Hello")
-    var name = prompt("Hello")
-    document.querySelector("button").innerText = "Hello "+name
-   }
-   
+    document.addEventListener('DOMContentLoaded', function () {
+        var myBtn = document.querySelector("button");
+        myBtn.addEventListener('click', clck);
+        //alert("Hello World")
+        //var name = prompt("Hello");
+        //alert("hello "+name+" Subscribe")
+        function clck() {
+            //alert("Hello")
+            //console.log("Hello")
+            var name = prompt("Hello");
+            myBtn.innerText = "Hello " + name;
+        }
+    });
 </script>
 </html>
