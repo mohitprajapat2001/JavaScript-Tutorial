@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Example 2</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>String Example 2</h1>
+        <div id="greet">
+        </div>
+    </div>
+</body>
+<script>
+    let mydiv = document.getElementById('greet')
+    const greet = [
+        "Wishing you a joyful and prosperous Diwali!",
+        "May the colors of Holi fill your life with happiness and love!",
+        "Eid Mubarak to you and your family!",
+        "Happy Navratri! May Maa Durga bless you with strength and prosperity!",
+        "Wishing you a blessed and peaceful Christmas!",
+        "Happy New Year! May the upcoming year be filled with joy and success!",
+        "May Lord Ganesh bless you with wisdom and good fortune on Ganesh Chaturthi!",
+        "Sending warm wishes on Makar Sankranti! May you soar high with happiness and success!",
+        "Happy Pongal! May this harvest festival bring abundance and prosperity to your life!",
+        "Wishing you a colorful and vibrant Baisakhi filled with joy and celebration!",
+        "Happy Raksha Bandhan! May the bond of love between siblings be strong and everlasting!",
+        "Warm wishes on Eid-ul-Fitr! May this auspicious occasion bring joy and harmony to your life!",
+        "Happy Janmashtami! May Lord Krishna shower his blessings upon you and your loved ones!",
+        "Wishing you a blessed and peaceful Gurpurab! May the teachings of Guru Nanak Dev Ji inspire you!",
+        "Happy Onam! May this harvest festival bring happiness and prosperity to your home!",
+        "Wishing you a blessed and joyous Maha Shivaratri! May Lord Shiva bless you with strength and peace!",
+        'Happy Birthday',
+    ];
+    //String Example Prompt User Input Depends Marquee greet will append
+    let wish = prompt("Enter Festival Name Capitalize");
+    for (let i = 0; i<greet.length; i++){
+        //if condition to find relevant greet message
+        if (greet[i].indexOf(wish) !== -1){
+            let marqureeItem = document.createElement('marquee');
+            marqureeItem.textContent = greet[i];
+            mydiv.appendChild(marqureeItem)
+        }
+    }
+</script>
+
+</html>

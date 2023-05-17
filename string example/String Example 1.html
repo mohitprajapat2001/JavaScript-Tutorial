@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Example 1</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>String Example 1</h1>
+        <ul id="cities"></ul>
+    </div>
+</body>
+<script>
+    let list = document.getElementById('cities')
+    //console.log(list)
+    //Cities Capatilize ul li
+    //Capitalize Mohit, Subscribe, Mumbai
+    const cities = ['ahMEdaBad', 'BanARas', 'mUmBAi', 'gOA', 'DeLHI', 'JaIpuR', 'nEw yoRk', 'sAn AnDreAs'];
+    //Create For Loop for Cities
+    for (let i = 0; i < cities.length; i++) {
+        // console.log(cities[i])
+        //cities of index i is Lowercased
+        let lowercase = cities[i].toLowerCase();
+        //Each City First Character Select
+        let firstCharacter = lowercase.slice(0,1);
+        //Replace First Character of Lowercase to Uppercase
+        lowercase = lowercase.replace(firstCharacter,firstCharacter.toUpperCase());
+        //Capitalize City ul li Append
+        let listItem = document.createElement('li')
+        listItem.textContent = lowercase
+        list.appendChild(listItem)        
+    }
+</script>
+
+</html>
