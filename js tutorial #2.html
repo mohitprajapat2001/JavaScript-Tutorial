@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        button {
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Hello</button>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var myBtn = document.querySelector("button");
+        myBtn.addEventListener('click', clck);
+        //alert("Hello World")
+        //var name = prompt("Hello");
+        //alert("hello "+name+" Subscribe")
+        function clck() {
+            //alert("Hello")
+            //console.log("Hello")
+            var name = prompt("Hello");
+            myBtn.innerText = "Hello " + name;
+        }
+    });
+</script>
+</html>
