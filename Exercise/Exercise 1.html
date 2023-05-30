@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 Guess The Number</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        div.input {
+            margin-bottom: 25px;
+        }
+        div.input input{
+            padding: 5px;
+        }
+        div.input input:hover{
+            color: white;
+            background: transparent;
+        }
+        .btn {
+            display: block;
+            background-color: transparent;
+            border: 5px solid;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: auto;
+            padding: 10px 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            &:hover,
+            &:focus {
+                color: #fff;
+                outline: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1><b>Guess The Number</b></h1>
+            <p>Lets Start The Game</p>
+            <p>Choose Number Between 0 to 9</p>
+            <div id="result">
+                <p class="chances">Chances : 3</p>
+                <p class="log">Log : Your Stat</p>
+            </div>
+            <div class="input">
+            <label for="number">Number : </label>
+            <input type="text" id="number" placeholder="Enter Your Number">
+            </div>
+            <button class="btn" onclick="guess()">Click Me</button>
+        </div>
+    </div>
+</body>
+<script>
+    function guess(){
+        alert("Subscribe")
+    }
+</script>
+
+</html>
