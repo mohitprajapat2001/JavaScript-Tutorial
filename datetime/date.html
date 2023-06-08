@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Function</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .date{
+            background-color:turquoise;
+            text-align: center;
+            padding: 25px;
+            margin: 10px;
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Date Time Function</h1>
+    <div class="date">
+        Current Time : <span id="time"></span>
+    </div>
+    
+</body>
+<script>
+    let dt = new Date();
+    console.log(dt)
+    // let mydate = new Date(year, month, date, hours, minutes, second, millisecond)
+    let mydate = new Date(2029, 06, 09, 5, 40, 30, 2000)
+    console.log(mydate);
+    //Get Year
+    console.log(dt.getFullYear())
+    //Get Month
+    console.log(dt.getMonth())
+    //Get Date
+    console.log(dt.getDate())
+    //Get Hour
+    console.log(dt.getHours())
+    //Get Minutes
+    console.log(dt.getMinutes())
+    //Get getSeconds
+    console.log(dt.getSeconds())
+
+    setInterval(gettimenow, 1000)
+    function gettimenow(){
+        let dt = new Date()
+        let spantime = document.querySelector('#time')
+        spantime.textContent = dt
+    }
+</script>
+</html>
