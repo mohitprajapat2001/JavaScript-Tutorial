@@ -37,16 +37,20 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+
         div.input {
             margin-bottom: 25px;
         }
-        div.input input{
+
+        div.input input {
             padding: 5px;
         }
-        div.input input:hover{
+
+        div.input input:hover {
             color: white;
             background: transparent;
         }
+
         .btn {
             display: block;
             background-color: transparent;
@@ -74,20 +78,42 @@
             <p>Lets Start The Game</p>
             <p>Choose Number Between 0 to 9</p>
             <div id="result">
-                <p class="chances">Chances : 3</p>
-                <p class="log">Log : Your Stat</p>
+                <p>Chances : <span id="chances">10</span></p>
+                <p class="log">Log : <span id="log">Start Game</span></p>
             </div>
             <div class="input">
-            <label for="number">Number : </label>
-            <input type="text" id="number" placeholder="Enter Your Number">
+                <label for="number">Number : </label>
+                <input type="text" id="userInput" placeholder="Enter Your Number">
             </div>
             <button class="btn" onclick="guess()">Click Me</button>
         </div>
     </div>
 </body>
 <script>
-    function guess(){
-        alert("Subscribe")
+    function guess() {
+        //To get Input Tag Value
+        let input = parseInt(document.getElementById("userInput").value.trim());
+        let randomnumber = Math.floor(Math.random() * 10)
+        if (!isNaN(input) && input >= 0 && input < 10) {
+            if (input == randomnumber) {
+                let result = document.getElementById('log');
+                alert("You Win The Game Congrats");
+                result.textContent = 'You Win the Game';
+                location.reload();
+            } else {
+                let result = document.getElementById('log');
+                result.textContent = "You Lost Try Again";
+                let chance = document.getElementById('chances');
+                let temp = chance.innerHTML;
+                chance.textContent = (temp - 1)
+                if (temp == 0) {
+                    alert("You Lost Can't Try Play Again");
+                    location.reload();
+                }
+            }
+        } else {
+            alert("Invalid Input")
+        }
     }
 </script>
 
