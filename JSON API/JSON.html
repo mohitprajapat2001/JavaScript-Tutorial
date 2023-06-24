@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Example</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let myobj = {
+        name : "Mohit",
+        channel : "Subscribe",
+        Linkedin : "Follow",
+        education : [1,2,3,4],
+        social : {
+            facebook : "Like",
+            Instagram : "Follow"
+        }
+    }
+    console.log(myobj)
+    console.log(typeof myobj)
+    //Function stringify Takes OBJECT as Parameter
+    let jsonobj = JSON.stringify(myobj);
+    console.log(jsonobj)
+    console.log(typeof jsonobj)
+    //Parse JSON
+    let jsonparse = JSON.parse(jsonobj);
+    console.log(jsonparse);
+    console.log(typeof  jsonparse)
+
+</script>
+</html>
